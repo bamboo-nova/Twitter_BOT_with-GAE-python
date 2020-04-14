@@ -1,0 +1,6 @@
+queue:
+- name: tweet
+  rate: 1/s
+  bucket_size: 1 # 並列で処理を行う数
+  retry_parameters:
+    task_retry_limit: 3

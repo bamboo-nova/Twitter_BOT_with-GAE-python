@@ -1,0 +1,34 @@
+application: helloworld
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+libraries:
+- name: ssl
+  version: latest
+- name: django
+  version: "1.4"
+- name: jinja2
+  version: latest
+
+handlers:
+- url: /
+  script: main.app # hell.pyの変数appを呼び出す
+  secure: always
+
+- url: /registration
+  script: main.app # hell.pyの変数appを呼び出す
+  secure: always
+
+- url: /launcher
+  script: launcher.app # hell.pyの変数appを呼び出す
+  secure: always
+
+- url: /callback # コールバック用のアドレス
+  script: main.app
+  secure: always # HTTPS通信を強制
+
+- url: /tweet
+  script: tweet.app
+  secure: always

@@ -1,0 +1,10 @@
+cron:
+- description: tweet job
+  url: /launcher
+  schedule: every 10 minutes from 1:00 to 17:59
+  timezone: Asia/Tokyo # 時間指定を行う際にはタイムゾーンを忘れないようにする
+
+- description: tweet job
+  url: /launcher
+  schedule: every 5 minutes from 18:00 to 0:59
+  timezone: Asia/Tokyo
