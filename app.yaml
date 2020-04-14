@@ -14,20 +14,20 @@ libraries:
 
 handlers:
 - url: /
-  script: main.app # hell.pyの変数appを呼び出す
+  script: main.app
   secure: always
 
 - url: /registration
-  script: main.app # hell.pyの変数appを呼び出す
+  script: main.app
   secure: always
 
 - url: /launcher
-  script: launcher.app # hell.pyの変数appを呼び出す
+  script: launcher.app
   secure: always
 
-- url: /callback # コールバック用のアドレス
+- url: /callback
   script: main.app
-  secure: always # HTTPS通信を強制
+  secure: always
 
 - url: /tweet
   script: tweet.app
